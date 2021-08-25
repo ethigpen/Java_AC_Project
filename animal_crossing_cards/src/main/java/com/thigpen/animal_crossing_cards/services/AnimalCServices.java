@@ -29,7 +29,18 @@ public class AnimalCServices {
 		return this.acrepo.findById(id).orElse(null);
 	}
 	
+	//search by species
 	public List<AnimalC> findBySpecies(String species){
 		return this.acrepo.findBySpecies(species);
+	}
+	
+	//search by name
+	public List<AnimalC> findBYname(String name){
+		return this.acrepo.findByName(name);
+	}
+	
+	//search by gender
+	public List<AnimalC> findBYgender(String gender){
+		return this.acrepo.findByGender(gender);
 	}
 }

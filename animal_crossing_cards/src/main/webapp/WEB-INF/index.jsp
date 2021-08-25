@@ -37,6 +37,10 @@
                     list-style: none;
                     color: black;
                 }
+
+                input{
+                    width: 350px;
+                }
             </style>
             <title>Welcome</title>
         </head>
@@ -47,7 +51,7 @@
                     <h1>All Animals</h1>
                     <form action="/search/" method="POST">
                         <div class="d-flex align-items-center ms-5">
-                            <input type="search" name ="search">
+                            <input type="search" name ="search" placeholder="Please search by name, species, or gender">
                             <button type="submit" class="btn btn-primary">Search Animals</button>
                         </div>
                     </form>

@@ -14,12 +14,24 @@
     img{
         width: 150px;
     }
+
+    input{
+         width: 350px;
+    }
 </style>
 <title>${ani.name}s Info</title>
 </head>
 <body>
     <div class="container">
-    <a href= "/home" class="btn btn-primary">Dashboard</a>
+        <div class="mt-3 d-flex gap-2">
+            <a href= "/home" class="btn btn-primary">Dashboard</a>
+            <form action="/search/" method="POST">
+                <div class="d-flex align-items-center ms-5">
+                    <input type="search" name ="search" placeholder="Please search by name, species, or gender">
+                    <button type="submit" class="btn btn-primary">Search Animals</button>
+                </div>
+            </form>
+        </div>
         <h1>Name: ${ani.name}</h1> 
         <h1>Gender: ${ani.gender}</h1> 
         <h1>Species: ${ani.species}</h1> 

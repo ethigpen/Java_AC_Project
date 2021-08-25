@@ -54,6 +54,7 @@ public class HomeController {
 //		AnimalC test = new AnimalC(name, personality, bday, species, gender, hobby, catchphrase, icon_url, img_url, bubble_color, text_color, saying);
 //		this.animalServ.createAnimal(test);
 //		}
+		
 	}
 	
 	@GetMapping("/home")
@@ -71,6 +72,8 @@ public class HomeController {
 		return "show.jsp";
 	}
 	
+	
+	//sending a string with whatever is in the search box. and put it to the request param
 	@RequestMapping(value="/search/", method=RequestMethod.POST) 
     public String search(@RequestParam(value="search") String search) {
 		System.out.println(search);
@@ -79,13 +82,23 @@ public class HomeController {
     	return "redirect:/search/" + search;	
     }
 	
+	//return that request param and become a pathvariable called search
+	//it contains the string from the post request.
 	 @RequestMapping(value="/search/{search}")
 	    public String showArtist(Model model,@PathVariable("search") String search) {
+		 
+		 
 	    	List<AnimalC> animals = animalServ.findBySpecies(search);
-
+	    	List<AnimalC> animalnames = animalServ.findBYname(search);
+	    	List<AnimalC> gender = animalServ.findBYgender(search);
+	    	
 	    	model.addAttribute("searched", search);
 	    	
 	        model.addAttribute("animals", animals);
+	        
+	        model.addAttribute("animalnames",animalnames);
+	        
+	        model.addAttribute("gender", gender);
 	    
 	        return "/searchedSpecies.jsp";
 	}

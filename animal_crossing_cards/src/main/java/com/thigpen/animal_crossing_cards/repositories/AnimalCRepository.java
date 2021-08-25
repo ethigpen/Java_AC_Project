@@ -11,5 +11,6 @@ import com.thigpen.animal_crossing_cards.models.AnimalC;
 public interface AnimalCRepository extends CrudRepository<AnimalC, Long> {
 	
 	List<AnimalC> findBySpecies(String species);
-
+	List<AnimalC> findByName(String name);
+	List<AnimalC> findByGender(String gender);
 }

@@ -1,5 +1,7 @@
 package com.thigpen.animal_crossing_cards.models;
 
+
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -87,6 +89,8 @@ public class AnimalC {
 		this.updatedAt = new Date();
 	}
 
+
+	
 //    constructors
 	public AnimalC() {
 
