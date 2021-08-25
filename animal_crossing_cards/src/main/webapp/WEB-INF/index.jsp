@@ -29,7 +29,7 @@
                 }
 
                 img {
-                    width: 125px
+                    width: 125px;
                 }
 
                 a {
@@ -43,18 +43,14 @@
 
         <body>
             <div class="container">
-                <div class="mt-3 d-flex ">
+                <div class="mt-3 d-flex">
                     <h1>All Animals</h1>
-                    <div class="d-flex align-items-center ms-5">
-                        <h1>xjbndckjvdnfvldfmlokb</h1>
-                        <label for="filter">Filter: </label>
-                        <select class="form-select">
-                            <option value="species">Species</option>
-                            <option value="gender">Gender</option>
-                            <option value="personality">Personality</option>
-                            <option value="hobby">Hobby</option>
-                        </select>
-                    </div>
+                    <form action="/search/" method="POST">
+                        <div class="d-flex align-items-center ms-5">
+                            <input type="search" name ="search">
+                            <button type="submit" class="btn btn-primary">Search Animals</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="d-flex flex-wrap gap-4">
                     <c:forEach items='${allanimals}' var='nd'>
@@ -66,5 +62,4 @@
                 </div>
             </div>
         </body>
-
         </html>

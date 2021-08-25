@@ -28,4 +28,8 @@ public class AnimalCServices {
 	public AnimalC findanimal(Long id) {
 		return this.acrepo.findById(id).orElse(null);
 	}
+	
+	public List<AnimalC> findBySpecies(String species){
+		return this.acrepo.findBySpecies(species);
+	}
 }

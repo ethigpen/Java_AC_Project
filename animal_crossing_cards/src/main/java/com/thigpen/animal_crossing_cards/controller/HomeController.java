@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.thigpen.animal_crossing_cards.models.AnimalC;
 import com.thigpen.animal_crossing_cards.services.AnimalCServices;
@@ -67,5 +70,49 @@ public class HomeController {
 		model.addAttribute("ani",animal);
 		return "show.jsp";
 	}
+	
+	@RequestMapping(value="/search/", method=RequestMethod.POST) 
+    public String search(@RequestParam(value="search") String search) {
+		System.out.println(search);
+    	
+
+    	return "redirect:/search/" + search;	
+    }
+	
+	 @RequestMapping(value="/search/{search}")
+	    public String showArtist(Model model,@PathVariable("search") String search) {
+	    	List<AnimalC> animals = animalServ.findBySpecies(search);
+
+	    	model.addAttribute("searched", search);
+	    	
+	        model.addAttribute("animals", animals);
+	    
+	        return "/searchedSpecies.jsp";
+	}
+	
+//	@PostMapping("/home/search")
+//	public String search(@RequestParam("species") String species) {
+//		model.addAttribute("animals", animalServ.findBySpecies(species));
+//		model.addAttribute("species", species);
+//		return "/home/searchedSpecies.jsp";
+//		
+//		
+//	}
+//	
+	
+	
+	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
