@@ -76,7 +76,7 @@ public class HomeController {
 	//sending a string with whatever is in the search box. and put it to the request param
 	@RequestMapping(value="/search/", method=RequestMethod.POST) 
     public String search(@RequestParam(value="search") String search) {
-		System.out.println(search);
+//		System.out.println(search);
     	
 
     	return "redirect:/search/" + search;	
