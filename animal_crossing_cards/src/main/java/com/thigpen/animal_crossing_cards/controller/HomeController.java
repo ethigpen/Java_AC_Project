@@ -21,7 +21,7 @@ public class HomeController {
 	private AnimalCServices animalServ;
 	
 	@GetMapping("/")
-	public void getStuffAPI() throws Exception {
+	public String getStuffAPI() throws Exception {
 		
 //		for(int i=1; i<392; i++) {
 //		String host = "http://acnhapi.com/v1/villagers/";
@@ -54,6 +54,7 @@ public class HomeController {
 //		AnimalC test = new AnimalC(name, personality, bday, species, gender, hobby, catchphrase, icon_url, img_url, bubble_color, text_color, saying);
 //		this.animalServ.createAnimal(test);
 //		}
+		return "redirect:/home";
 		
 	}
 	

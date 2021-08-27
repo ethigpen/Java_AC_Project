@@ -26,8 +26,7 @@
                 </div>
                 <div class="mt-3 d-flex gap-lg-5 p-lg-3" >
                     <div class="main" style="background-color: ${ani.bubble_color};">
-                        <h1 style="color: ${ani.text_color};">Name:<img class="icon" src="${ani.icon_url}" alt="animal crossing character icon">
-                            ${ani.name} <img class="icon" src="${ani.icon_url}" alt="animal crossing character icon">
+                        <h1 style="color: ${ani.text_color};">Name: <img class="icon" src="${ani.icon_url}" alt="animal crossing character icon">  ${ani.name}  <img class="icon" src="${ani.icon_url}" alt="animal crossing character icon">
                         </h1>
                         <h3 style="color: ${ani.text_color};">Species: ${ani.species}</h3>
                         <h3 style="color: ${ani.text_color};">Gender: ${ani.gender}</h3>
