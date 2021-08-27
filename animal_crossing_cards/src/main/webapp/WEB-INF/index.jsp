@@ -8,18 +8,18 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
                 crossorigin="anonymous">
-            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/css/style.css">
             <title>Welcome</title>
         </head>
 
         <body>
             <div class="container">
-                <div class="mt-3 d-flex">
+                <div class="mt-3 d-flex mb-5">
                     <h1>All Animals</h1>
                     <form action="/search/" method="POST">
                         <div class="d-flex align-items-center ms-5">
-                            <input type="search" name ="search" placeholder="Please search by name, species, or gender">
-                            <button type="submit" class="btn btn-primary">Search Animals</button>
+                            <input class="form-control" type="search" name ="search" placeholder="Please search by name, species, or gender">
+                            <button type="submit" class="btn ms-2">Search Animals</button>
                         </div>
                     </form>
                 </div>

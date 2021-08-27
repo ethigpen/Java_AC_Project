@@ -14,21 +14,29 @@
                 .card {
                     width: 155px;
                     height: 200px;
-                    border: 2px solid black;
+                    border: 2px solid rgb(14, 161, 131);
                     display: flex;
                     justify-content: start;
                     align-items: center;
-                    background-color: rgb(196, 247, 236);
+                    background-color: rgb(203, 247, 234);
                 }
 
                 .card:hover {
                     transform: scale(1.15);
                     transition: .5s;
                 }
+                
+                h2{
+                	color: rgb(14, 161, 131);
+                }
 
                 img {
                     width: 125px;
                 }
+                
+                .bigimg {
+                    width: 350px;
+                    }
 
                 a {
                     text-decoration: none;
@@ -36,6 +44,21 @@
                     color: black;
                 }
 
-                input{
+                .form-control{
                     width: 350px;
                 }
+                
+                .icon {
+                        width: 50px;
+                }
+                
+                .main{
+                        padding: 1.5em;
+                }
+                    
+                 .btn{
+                    	background-color: rgb(89, 219, 197);
+                    	color: rgb(31, 82, 73);
+                 }
+                
+               
