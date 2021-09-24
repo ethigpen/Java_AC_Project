@@ -15,7 +15,7 @@
         <body>
             <div class="container">
                 <div class="mt-3 d-flex mb-5">
-                    <h1>All Animals</h1>
+                    <h1 class="title">Animal Crossing Characters</h1>
                     <form action="/search/" method="POST">
                         <div class="d-flex align-items-center ms-5">
                             <input class="form-control" type="search" name ="search" placeholder="Please search by name, species, or gender">

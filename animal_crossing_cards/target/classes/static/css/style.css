@@ -60,5 +60,10 @@
                     	background-color: rgb(89, 219, 197);
                     	color: rgb(31, 82, 73);
                  }
+                 
+                 .title{
+                 	color: rgb(14, 161, 131);
+                 	text-shadow: 1px 1px 2px rgb(31,82,73);
+                 }
                 
                
